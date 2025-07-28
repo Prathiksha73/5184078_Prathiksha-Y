@@ -1,6 +1,7 @@
  5184078_Prathiksha-Y
  ## ✅ Agile Completion
 ![Agile Diagram](Agile.png)
-### Simplilearn Agile Certificate
+### Agile Certificate
 
-![Simplilearn Certificate](Simplilearn%20certificate.png)
+![Agile Certificate](Simplilearn%20certificate.png)
+
