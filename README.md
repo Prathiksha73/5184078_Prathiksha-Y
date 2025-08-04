@@ -17,3 +17,6 @@
   <img src="linux_assesment3.png" width="300" />
   <img src="linux_assesment4.png" width="300" />
 </div>
+### 📜 SoloLearn Certificate
+
+![SoloLearn Certificate](Sololearn_certificate.jpg)
