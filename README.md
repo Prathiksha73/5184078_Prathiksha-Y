@@ -20,3 +20,8 @@
 ### 📜 SoloLearn Certificate
 
 ![SoloLearn Certificate](Sololearn_certificate.jpg)
+# Certificates
+
+## C Intermediate – SoloLearn
+
+![C Intermediate Certificate](C_intermediate_sololearn.jpg)
