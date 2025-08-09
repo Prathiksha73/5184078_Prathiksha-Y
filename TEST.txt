@@ -1,1 +1,2 @@
-MAIN branch NEW conflicting edit.
+This is the MAIN branch version.
+
