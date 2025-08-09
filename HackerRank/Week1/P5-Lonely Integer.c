@@ -24,11 +24,18 @@ int parse_int(char*);
  */
 
 int lonelyinteger(int a_count, int* a) {
-    int result = 0;
-    for (int i = 0; i < a_count; i++) {
-        result ^= a[i];
+    for(int i=0;i<a_count;i++){
+        int c=0;
+        for(int j=0;j<a_count;j++){
+            if(a[i]==a[j]){
+                c++;
+            }
+            
+        } 
+  if(c==1){
+    return a[i];  }
     }
-    return result;
+    return 0;
 }
 
 int main()
