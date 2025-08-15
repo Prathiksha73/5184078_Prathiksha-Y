@@ -1,6 +1,7 @@
  5184078_Prathiksha-Y
- ## ✅ Agile Completion
-![Agile Diagram](Agile.png)
+ ## ✅ SDLC Completion
+![Agile Certificate](SDLC/Agile.png)
+
 ### Simplilearn Certificate
 
 ![Simplilearn Certificate](Simplilearn_certificate.png)
