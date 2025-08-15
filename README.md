@@ -2,9 +2,10 @@
  ## ✅ SDLC Completion
 ![Agile Certificate](SDLC/Agile.png)
 
-### Simplilearn Certificate
+### GIT Certificate
+![Simplilearn Certificate](GIT/Simplilearn_certificate.png)
 
-![Simplilearn Certificate](Simplilearn_certificate.png)
+### Linux commands
 <h2>Linux Assessment Screenshots</h2>
 
 <div align="center">
