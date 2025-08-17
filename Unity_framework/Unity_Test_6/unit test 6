@@ -1,0 +1,66 @@
+#To swap the elements in array
+//main.c
+#include "stdio.h"
+#include "arr_swap.h"
+#include "unity.h"
+
+void setUp(){}
+void tearDown(){}
+
+void test_arr_swap(){
+  int arr[]={1,2,3,4,5};
+  int size =5;
+  arr_swap(arr,size); 
+  int expected[]={5,4,3,2,1};
+  TEST_ASSERT_EQUAL_INT_ARRAY(expected,arr,size); 
+}
+void test_not_arr_swap(){
+  int arr[]={1,2,3,4,5};
+  int size =5;
+  arr_swap(arr,size); 
+  int expected[]={1,4,3,2,5};
+  TEST_ASSERT_EQUAL_INT_ARRAY(expected,arr,size); 
+}
+
+
+int main(){
+    UNITY_BEGIN();
+    RUN_TEST(test_arr_swap);
+    RUN_TEST(test_not_arr_swap);
+    return UNITY_END();
+}
+
+//arr_swap.c
+#include "arr_swap.h"
+#include "unity.h"
+
+void arr_swap(int arr[], int size) {
+    int *st = arr;
+    int *ed = arr + size - 1;
+
+    while (st < ed) {
+        int temp = *st;
+        *st = *ed;
+        *ed = temp;
+
+        st++;
+        ed--;
+    }
+}
+
+//arr_swap.h
+#ifndef __ARRSWAP__H
+#define __ARRSWAP__H
+void arr_swap(int arr[],int size);
+#endif
+
+//Makefile
+
+object.o: main.c arr_swap.c unity.c
+	gcc $^ -c
+out:main.o arr_swap.o unity.o
+	gcc $^ -o out.exe
+run: out
+	./out.exe
+clean:
+	rm -rf *.o*.out
