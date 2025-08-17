@@ -41,9 +41,8 @@
   <img src="LINUX/linux_assesment3.png" width="300" />
   <img src="LINUX/linux_assesment4.png" width="300" />
 </div>
-
-### 📜ifProgramming
-**Topics Covered:**  
+### C PROGRAM
+ **Topics Covered:**  
 - Understood the **structure of a C program** and its execution flow.  
 - Worked with **data types, variables, and constants** for effective memory usage.  
 - Implemented **conditional statements and loops** (`if`, `for`, `while`, `switch`) for control flow.  
