@@ -19,6 +19,7 @@
 ![Simplilearn Certificate](GIT/Simplilearn_certificate.png)
 
 ### Linux commands
+
 **Key Concepts Practiced:**  
 - Navigated directories and performed efficient **file management** operations.  
 - Created, viewed, and edited files using tools like **nano, cat, head, and tail**.  
@@ -41,8 +42,10 @@
   <img src="LINUX/linux_assesment3.png" width="300" />
   <img src="LINUX/linux_assesment4.png" width="300" />
 </div>
+
 ### C PROGRAM
- **Topics Covered:**  
+
+**Topics Covered:**  
 - Understood the **structure of a C program** and its execution flow.  
 - Worked with **data types, variables, and constants** for effective memory usage.  
 - Implemented **conditional statements and loops** (`if`, `for`, `while`, `switch`) for control flow.  
@@ -56,6 +59,7 @@
 - Learned to use **structures and typedef** for organizing complex data.  
 - Practiced **file handling operations** (read, write, append) in C.  
 - Explored **preprocessor operators** for advanced program control.  
+ 
 
 ![Sololearn Certificate](C_completion/Sololearn_certificate.jpg)
 # Certificates
