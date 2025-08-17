@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include "unity.h"
+#include "arr.h"
+
+void setUp(void) {}
+void tearDown(void) {}
+
+void test_avg(void) {
+    int arr[] = {1, 2, 3, 4, 5};
+    TEST_ASSERT_FLOAT_WITHIN(0.0, 3.0, arr_average(arr, 5));   // exact match
+    TEST_ASSERT_FLOAT_WITHIN(0.21, 2.8, arr_average(arr, 5));  // within margin
+    TEST_ASSERT_FLOAT_WITHIN(0.5, 2.5, arr_average(arr, 5));   // approximate
+    TEST_ASSERT_FLOAT_WITHIN(0.0, 0.0, arr_average(arr, 0));   // size=0 → 0
+}
+
+int main(void) {
+    UNITY_BEGIN();
+    RUN_TEST(test_avg);
+    return UNITY_END();
+}
+#include "arr.h"
+
+float arr_average(int arr[], int size) {
+    if (size == 0) return 0.0f;
+
+    float sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum / size;
+}
+#ifndef __ARR__H
+#define __ARR__H
+
+float arr_average(int arr[], int size);
+
+#endif
+CC = gcc
+CFLAGS = -Wall
+
+SRC = main.c average.c unity.c
+OBJ = $(SRC:.c=.o)
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $^ -o arr_avg.exe
+
+run: all
+	./arr_avg.exe
+
+clean:
+	rm -f *.o *.exe
