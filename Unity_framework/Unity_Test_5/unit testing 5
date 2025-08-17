@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include "swap.h"
+#include "unity.h"
+
+void setUp(void) {}
+void tearDown(void) {}
+
+void test_swap(void) {
+    int a = 10, b = 20;
+    num_swap(&a, &b);
+    TEST_ASSERT_EQUAL_INT(20, a);
+    TEST_ASSERT_EQUAL_INT(10, b);
+}
+
+int main(void) {
+    UNITY_BEGIN();
+    RUN_TEST(test_swap);
+    return UNITY_END();
+}
+#include "swap.h"
+
+void num_swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+#ifndef __SWAP__H
+#define __SWAP__H
+
+void num_swap(int *a, int *b);
+
+#endif
+CC = gcc
+CFLAGS = -Wall
+
+SRC = main.c swap.c unity.c
+OBJ = $(SRC:.c=.o)
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $^ -o swap.exe
+
+run: all
+	./swap.exe
+
+clean:
+	rm -f *.o *.exe
