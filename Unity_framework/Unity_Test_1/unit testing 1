@@ -1,0 +1,77 @@
+#include <stdio.h>   // system header
+#include "demo.h"
+#include "unity.h"
+
+// setup before each test
+void setUp() {
+    printf("\n[Setup] Preparing test case...\n");
+    printf("----------------------------------\n");
+}
+
+// cleanup after each test
+void tearDown() {
+    printf("[Teardown] Finished executing test case.\n");
+    printf("----------------------------------\n\n");
+}
+
+// test cases
+void test_sum() {
+    TEST_ASSERT_EQUAL(5, sum(2, 3));
+    TEST_ASSERT_EQUAL(6, sum(3, 3));
+}
+
+void test_square() {
+    TEST_ASSERT_EQUAL(9, square(3));
+    TEST_ASSERT_EQUAL(4, square(2));
+}
+
+int main() {
+    int a = 10, b = 15, c = 0;
+
+    // normal function calls
+    c = sum(a, b);
+    printf("The sum of %d and %d is %d\n", a, b, c);
+
+    c = square(a);
+    printf("The square of %d is %d\n", a, c);
+
+    // run unity test framework
+    UNITY_BEGIN();
+    RUN_TEST(test_sum);
+    RUN_TEST(test_square);
+
+    return UNITY_END();
+}
+#include "demo.h"
+
+int sum(int a, int b) {
+    return a + b;
+}
+#include "demo.h"
+
+int square(int a) {
+    return a * a;
+}
+#ifndef __DEMO__H
+#define __DEMO__H
+
+int sum(int a, int b);
+int square(int a);
+
+#endif
+CC = gcc
+CFLAGS = -Wall
+
+SRC = main.c sum.c square.c
+OBJ = $(SRC:.c=.o)
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $^ -o all.exe
+
+run: all
+	./all.exe
+
+clean:
+	rm -f *.o all.exe
+
+
